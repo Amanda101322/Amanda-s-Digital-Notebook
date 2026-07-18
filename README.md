@@ -1,4 +1,4 @@
-# 📔 Amanda's Digital Notebook
+# Amanda's Digital Notebook
 Welcome! This is my personal portfolio and digital garden, built entirely from scratch with a cutesy, demure, and minimalist notebook aesthetic. 
 I’m a graphic designer and builder currently exploring the intersections of finance, literature, law, and textiles through code. This space serves as my master hub tracking my creations, my learning journey, and the things I love.
 
