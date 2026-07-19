@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amanda's — Digital Notebook</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
     <header class="hero">
@@ -25,10 +14,11 @@
         <span class="ticker-item">Currently reading: 3 books</span>
     </div>
 
-    <main class="notebook-layout">
-        <section class="column">
+    <main class="notebook-layout bento-grid">
+        
+        <section class="span-2">
             <h2 class="section-title">Active Builds (Macondo Orchard)</h2>
-            <div class="link-stack">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
                 <a href="#" class="notebook-card highlight-purple">
                     <h3>Manda-Costura</h3>
                     <p>A beautifully designed digital home for sewing and textile creation.</p>
@@ -46,33 +36,145 @@
                     <p>A smart web tool for managing applications and tracking scholarships.</p>
                 </a>
             </div>
+        </section>
 
-            <h2 class="section-title">Join the Movement</h2>
+        <section class="notebook-card highlight-pink">
+            <h2 class="section-title" style="padding-left: 0; margin-bottom: 1rem;">The Academic Shelf</h2>
             <div class="link-stack">
-                <a href="https://forms.gle/wovKvotHPC7svroh7" target="_blank" class="notebook-card bgsa-card">
-                    <h3>Apply to BGSA</h3>
-                    <p>Become a Founding Executive at the Beacon Global Students Alliance—a global platform created to empower students. Apply via Google Forms today!</p>
-                </a>
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=GRVXlhvv&id=14698C38D10B22C450F7026A9B3887CF27BD2D77&thid=OIP.GRVXlhvvuVsHS1P220py9gAAAA&mediaurl=https%3a%2f%2fwww.booktopia.com.au%2fcovers%2fbig%2f9780199644704%2f1611%2fthe-concept-of-law.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.191557961befb95b074b53f6db4a72f6%3frik%3ddy29J8%252bHOJtqAg%26pid%3dImgRaw%26r%3d0&exph=451&expw=300&q=concept+of+law+by+la+hartbook+cover&mode=overlay&FORM=IQFRBA&ck=6A34AAAAD862238681BB61689E32EE53&selectedIndex=0&idpp=serp" alt="The Concept of Law Cover" class="book-cover">
+                    <div class="book-details">
+                        <strong>The Concept of Law</strong>
+                        <span>H.L.A. Hart</span>
+                    </div>
+                </div>
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=3nyYC%2bOU&id=89EFD97DCC52681D5E95B0808D95F724483E7D9A&thid=OIP.3nyYC-OU52LnbeHS1hTbFAAAAA&mediaurl=https%3a%2f%2fimages.bwbcovers.com%2f069%2f9780691178974.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.de7c980be394e762e76de1d2d614db14%3frik%3dmn0%252bSCT3lY2AsA%26pid%3dImgRaw%26r%3d0&exph=400&expw=263&q=code+of+law+by+katarina+pistor+book+cover&mode=overlay&FORM=IQFRBA&ck=1602B85690F77C0861FF41A5FB7FE233&selectedIndex=0&idpp=serp" alt="The Code of Capital Cover" class="book-cover">
+                    <div class="book-details">
+                        <strong>The Code of Capital</strong>
+                        <span>Katharina Pistor</span>
+                    </div>
+                </div>
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=eWEsensc&id=FBFC2546B031F153BF47336AFB710D051085A23D&thid=OIP.eWEsenscQv5iza1_-5JWEwHaHa&mediaurl=https%3a%2f%2fwww.picclickimg.com%2f0xAAAeSwob9pRo7F%2f2025-LATEST-BRAND-NEW-Cambridge-IELTS-15-20.webp&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.79612c7a7b1c42fe62cdad7ffb925613%3frik%3dPaKFEAUNcftqMw%26pid%3dImgRaw%26r%3d0&exph=640&expw=640&q=cambridge+IELTS+book+15-20+book+cover&mode=overlay&FORM=IQFRBA&ck=038ABF5D910AC9CA972665B5B7FB43BD&selectedIndex=0&idpp=serp" alt="Cambridge IELTS" class="book-cover">
+                    <div class="book-details">
+                        <strong>Cambridge IELTS</strong>
+                        <span>Books 1 to 20</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="column">
-            <h2 class="section-title">The Bookshelf</h2>
-            <div class="notebook-card highlight-pink">
-                <h3>The Academic Shelf</h3>
-                <p><strong>The Concept of Law</strong> — H.L.A. Hart</p>
-                <p><strong>The Code of Capital</strong> — Katharina Pistor</p>
-            </div>
-            <div class="notebook-card highlight-pink">
-                <h3>The Leisure Shelf</h3>
-                <p>Diving deep into fantasy fiction, wolf shifters, and paranormal universes.</p>
-            </div>
+        <section class="notebook-card highlight-pink">
+            <h2 class="section-title" style="padding-left: 0; margin-bottom: 0.5rem;">The Leisure Shelf</h2>
+            <p>Diving deep into fantasy fiction, wolf shifters, and paranormal universes.</p>
+            
+            <div class="link-stack" style="max-height: 400px; overflow-y: auto; padding-right: 0.5rem; margin-top: 1rem;">
+                
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=2EMcCYtF&id=51BCBF6CFFC5CD68CB370E76A2E9F7B8DA49625E&thid=OIP.2EMcCYtFBUd_MNmbQUrs3gHaLH&mediaurl=https%3a%2f%2fm.media-amazon.com%2fimages%2fI%2f81J3oPsbyBL._SL1500_.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.d8431c098b4505477f30d99b414aecde%3frik%3dXmJJ2rj36aJ2Dg%26pid%3dImgRaw%26r%3d0&exph=1500&expw=1000&q=kill+game+book+cover+cordelia+kingsbridge&mode=overlay&FORM=IQFRBA&ck=7076944770D894373ED00C3F19427D03&selectedIndex=0&idpp=serp" alt="Kill Game" class="book-cover">
+                    <div class="book-details">
+                        <strong>Kill Game</strong>
+                        <span>Cordelia Kingsbridge</span>
+                    </div>
+                </div>
 
-            <h2 class="section-title" style="margin-top: 1.5rem;">Current Rotation</h2>
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=6kK3s6O0&id=D89367DD16B6BDD1FDF12BB45A1D0BB48FA7DEB2&thid=OIP.6kK3s6O0C6vEN4VGFoocYwAAAA&mediaurl=https%3a%2f%2fimg1.od-cdn.com%2fImageType-400%2f2096-1%2f%7b42CFEBA8-010F-40FA-8B69-D3F16C8528C2%7dIMG400.JPG&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ea42b7b3a3b40babc4378546168a1c63%3frik%3dst6nj7QLHVq0Kw%26pid%3dImgRaw%26r%3d0&exph=400&expw=300&q=crywolf+by+charlie+adhara+book+cover&mode=overlay&FORM=IQFRBA&ck=7AEC297E6C2578F13B43E124E19FDACB&selectedIndex=0&idpp=serp" alt="Cry Wolf" class="book-cover">
+                    <div class="book-details">
+                        <strong>Cry Wolf</strong>
+                        <span>Charlie Adhara</span>
+                    </div>
+                </div>
+
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=LglIOPrA&id=8025AFB4660CAFA19D1B01EBBFF139F6B4CBBEA2&thid=OIP.LglIOPrA-6Gk5ZUVRgTZGgHaLH&mediaurl=https%3a%2f%2fcdn2.penguin.com.au%2fcovers%2foriginal%2f9781728206141.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.2e094838fac0fba1a4e595154604d91a%3frik%3dor7LtPY58b%252frAQ%26pid%3dImgRaw%26r%3d0&exph=1500&expw=1000&q=boyfriend+material+by+alexis+hall+book+cover&mode=overlay&FORM=IQFRBA&ck=2119993638FE1C78DE76C8009F4D87D8&selectedIndex=0&idpp=serp" alt="Boyfriend Material" class="book-cover">
+                    <div class="book-details">
+                        <strong>Boyfriend Material</strong>
+                        <span>Alexis Hall</span>
+                    </div>
+                </div>
+
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=YSKjKLcp&id=D19035AECBFFADB497C0CA334C25BE7EC158F74C&thid=OIP.YSKjKLcpOBjBXFxpagULdQHaLJ&mediaurl=https%3a%2f%2fs2982.pcdn.co%2fwp-content%2fuploads%2f2024%2f02%2fPack-of-Lies-by-Charlie-Adhara-Book-Cover-scaled.jpeg.optimal.jpeg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.6122a328b7293818c15c5c696a050b75%3frik%3dTPdYwX6%252bJUwzyg%26pid%3dImgRaw%26r%3d0&exph=2560&expw=1700&q=pack+of+lies+by+charlie+adhara+book+cover&mode=overlay&FORM=IQFRBA&ck=8EEFC8922DAF28635DC7804A48B28E43&selectedIndex=0&idpp=serp" alt="Pack of Lies" class="book-cover">
+                    <div class="book-details">
+                        <strong>Pack of Lies</strong>
+                        <span>Charlie Adhara</span>
+                    </div>
+                </div>
+
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=Y9c3CofV&id=C3FAAA69AA4B2CC916DF1F63314BF2E626708B89&thid=OIP.Y9c3CofVqzYefJniYwx8hwHaLq&mediaurl=https%3a%2f%2fbdebooks.com%2fen%2fwp-content%2fuploads%2f2024%2f04%2fWolf-in-Sheeps-Clothing.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.63d7370a87d5ab361e7c99e2630c7c87%3frik%3diYtwJubySzFjHw%26pid%3dImgRaw%26r%3d0&exph=1500&expw=953&q=wolf+in+sheep%27s+clothing+by+charlie+adhara+book+cover&mode=overlay&FORM=IQFRBA&ck=D6613575AB2F1B9252E346EA0E6B908F&selectedIndex=0&idpp=serp alt="Wolf in Sheep's Clothing" class="book-cover">
+                    <div class="book-details">
+                        <strong>Wolf in Sheep's Clothing</strong>
+                        <span>Charlie Adhara</span>
+                    </div>
+                </div>
+
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=7tBusT2p&id=01C15EB60D6587881B9D1384AF07CFD6983F1EFC&thid=OIP.7tBusT2pLJ08H8djlhtXfQHaLt&mediaurl=https%3a%2f%2fwww.loveinpanels.com%2fhubfs%2fthrown-to-the-wolves.jpg%23keepProtocol&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.eed06eb13da92c9d3c1fc763961b577d%3frik%3d%252fB4%252fmNbPB6%252bEEw%26pid%3dImgRaw%26r%3d0&exph=2650&expw=1675&q=thrown+to+the+wolves+by+charlie+adhara+book+cover&mode=overlay&FORM=IQFRBA&ck=2FB3121709C3A2FC1D63B741CFC55CE1&selectedIndex=0&idpp=serp" alt="Thrown to the Wolves" class="book-cover">
+                    <div class="book-details">
+                        <strong>Thrown to the Wolves</strong>
+                        <span>Charlie Adhara</span>
+                    </div>
+                </div>
+
+                <div class="book-card-content">
+                    <img src="https://www.bing.com/images/search?view=detailV2&ccid=SnuNX7yV&id=166F16BAA247CB9B25758266E6F6E911427FCA23&thid=OIP.SnuNX7yVmefbf2ZGVn9CPAAAAA&mediaurl=https%3a%2f%2fbdebooks.com%2fen%2fwp-content%2fuploads%2f2024%2f04%2fThe-Wolf-at-Bay.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.4a7b8d5fbc9599e7db7f6646567f423c%3frik%3dI8p%252fQhHp9uZmgg%26pid%3dImgRaw%26r%3d0&exph=500&expw=316&q=the+wolf+at+bay+by+charlie+adhara+book+cover&mode=overlay&FORM=IQFRBA&ck=B87259391F41C4C8773125F151EDF9D7&selectedIndex=0&idpp=serp" alt="The Wolf at Bay" class="book-cover">
+                    <div class="book-details">
+                        <strong>The Wolf at Bay</strong>
+                        <span>Charlie Adhara</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="notebook-card highlight-purple">
+            <h2 class="section-title" style="padding-left: 0; margin-bottom: 1rem;">Coursera Legal Track</h2>
+            <div class="link-stack">
+                <div class="course-status-item">
+                    <div class="course-info">
+                        <strong>American Contract Law I</strong>
+                        <span>Yale University • Coursera</span>
+                    </div>
+                    <span class="badge badge-in-progress">In Progress</span>
+                </div>
+
+                <div class="course-status-item">
+                    <div class="course-info">
+                        <strong>A Law Student's Toolkit</strong>
+                        <span>Yale University • Coursera</span>
+                    </div>
+                    <span class="badge badge-in-progress">In Progress</span>
+                </div>
+
+                <div class="course-status-item">
+                    <div class="course-info">
+                        <strong>European Business Law</strong>
+                        <span>Lund University • Coursera</span>
+                    </div>
+                    <span class="badge badge-in-progress">In Progress</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="span-2">
+            <h2 class="section-title">Current Rotation</h2>
             <div class="spotify-container">
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5vafOLkKWXYbbMdwFZbGjU?utm_source=generator&si=a6520e63c0394afe" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoNa35g?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
+        </section>
 
+        <section>
+            <h2 class="section-title">Join the Movement</h2>
+            <a href="https://forms.gle/wovKvotHPC7svroh7" target="_blank" class="notebook-card bgsa-card">
+                <h3>Apply to BGSA</h3>
+                <p>Become a Founding Executive at the Beacon Global Students Alliance—a global platform created to empower students. Apply via Google Forms today!</p>
+            </a>
+        </section>
+
+        <section>
             <h2 class="section-title">Beginner Launchpad</h2>
             <div class="link-stack">
                 <a href="https://www.freecodecamp.org" target="_blank" class="notebook-card highlight-green">
@@ -81,10 +183,12 @@
                 </a>
                 <a href="#" class="notebook-card highlight-green">
                     <h3>SideMe App</h3>
-                    <p>A paid structured mobile application on the Play Store that helps break programming concepts into daily micro-lessons.</p>
+                    <p>A paid structured mobile application that helps break programming concepts into daily micro-lessons.</p>
                 </a>
             </div>
+        </section>
 
+        <section class="span-2">
             <h2 class="section-title">Writing & Socials</h2>
             <div class="grid-links">
                 <a href="https://substack.com/@thewanderingmind964464" target="_blank" class="small-card">Substack</a>
@@ -92,8 +196,6 @@
                 <a href="https://www.tiktok.com/@cutie._.amy3?-r=1&t=ZS-9896tM3Sbd" target="_blank" class="small-card">TikTok</a>
                 <a href="https://www.facebook.com/share/1FSsHENthb/" target="_blank" class="small-card">Facebook</a>
             </div>
-        </section>
-    </main>
+        </section> </main>
 
 </body>
-</html>

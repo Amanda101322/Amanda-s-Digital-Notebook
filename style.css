@@ -1,4 +1,4 @@
-/* Styling Setup */
+/* 1. Styling Setup & Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -62,19 +62,13 @@ body {
     opacity: 0.4;
 }
 
-/* Layout Container */
+/* 2. Layout & Bento Grid System*/
 .notebook-layout {
     max-width: 650px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile-first single column layout */
     gap: 2.5rem;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
 }
 
 .section-title {
@@ -93,14 +87,24 @@ body {
     gap: 1rem;
 }
 
-/* Cutesy Borderless Cards */
+/* Social Grid Links */
+.grid-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* 3. Notebook & Custom Cards */
 .notebook-card {
     display: block;
     text-decoration: none;
     color: inherit;
     padding: 1.5rem;
     border-radius: 16px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 2px 8px rgba(11, 26, 48, 0.03);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .notebook-card h3 {
@@ -119,27 +123,34 @@ body {
     margin-bottom: 0;
 }
 
-/* Spotify Wrapper */
-.spotify-container {
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.spotify-container iframe {
-    border-radius: 16px;
-    border: none;
-}
-
-/* Soft Pastel Shifts */
+/* Custom Highlight Themes */
 .highlight-purple { background-color: #e8eefa; }
-.highlight-purple:hover { background-color: #dfdcf5; transform: translateY(-2px); }
+.highlight-purple:hover {
+    background-color: #dfdcf5;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(223, 220, 245, 0.5);
+}
 
 .highlight-pink { background-color: #f7ebed; }
+.highlight-pink:hover {
+    background-color: #f2dedf;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(247, 235, 237, 0.6);
+}
 
 .highlight-green { background-color: #e9f2ee; }
-.highlight-green:hover { background-color: #dbeae3; transform: translateY(-2px); }
+.highlight-green:hover {
+    background-color: #dbeae3;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(219, 234, 227, 0.6);
+}
+
+.highlight-blue { background-color: #e3effa; }
+.highlight-blue:hover {
+    background-color: #d2e4f7;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(210, 228, 247, 0.6);
+}
 
 .bgsa-card {
     background-color: #e3e0f3;
@@ -147,13 +158,6 @@ body {
 .bgsa-card:hover {
     background-color: #dad5f0;
     transform: translateY(-2px);
-}
-
-/* Small Dynamic Link Grids */
-.grid-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
 }
 
 .small-card {
@@ -167,30 +171,151 @@ body {
     border-radius: 12px;
     font-weight: 500;
     font-size: 0.95rem;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1),
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
 .small-card:hover {
-    background-color: #dfdcf5;
+    background-color: #ffffff;
+    border: 1px solid #dfdcf5;
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(11, 26, 48, 0.05);
 }
 
-/* Tablet & Desktop Expansion Rules */
+/* Spotify Wrapper */
+.spotify-container {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.spotify-container iframe {
+    border-radius: 16px;
+    border: none;
+}
+
+/* 4. Book Display (Works on Mobile + Desktop)*/
+.book-card-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(11, 26, 48, 0.05);
+}
+
+.book-card-content:last-child {
+    border-bottom: none;
+}
+
+.book-cover {
+    width: 50px;
+    height: 75px; /* 2:3 Perfect book aspect ratio */
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-details strong {
+    font-size: 0.95rem;
+    color: #0b1a30;
+}
+
+.book-details span {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Custom Minimalist Scrollbar Design */
+.link-stack::-webkit-scrollbar {
+    width: 6px;
+}
+.link-stack::-webkit-scrollbar-track {
+    background: transparent;
+}
+.link-stack::-webkit-scrollbar-thumb {
+    background: rgba(11, 26, 48, 0.15);
+    border-radius: 10px;
+}
+.link-stack::-webkit-scrollbar-thumb:hover {
+    background: rgba(11, 26, 48, 0.3);
+}
+
+/* 5. Coursera Legal Track Components*/
+.course-status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(11, 26, 48, 0.08);
+    gap: 1rem;
+}
+
+.course-status-item:last-child {
+    border-bottom: none;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-info strong {
+    font-size: 0.95rem;
+    color: #0b1a30;
+}
+
+.course-info span {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.badge-in-progress {
+    background-color: rgba(11, 26, 48, 0.06);
+    color: #0b1a30;
+    border: 1px solid rgba(11, 26, 48, 0.12);
+}
+
+/* 6. Tablet & Desktop Expansion Rules (Media Queries)*/
 @media (min-width: 768px) {
     body {
         padding: 4rem 2rem;
     }
     
-    .hero, .ticker-bar, .notebook-layout {
-        max-width: 900px;
+    .hero, .ticker-bar {
+        max-width: 750px;
     }
     
     .notebook-layout {
-        flex-direction: row;
-        gap: 3.5rem;
+        max-width: 750px;
+        grid-template-columns: repeat(2, 1fr); /* Initializes 2-column layout */
+        gap: 2rem;
     }
     
-    .column {
-        flex: 1;
+    .span-2 {
+        grid-column: span 2; /* Forces targeted cards across both columns */
+    }
+
+    .book-cover {
+        width: 60px;
+        height: 90px; /* Slightly upscaled for desktop monitors */
     }
 }
