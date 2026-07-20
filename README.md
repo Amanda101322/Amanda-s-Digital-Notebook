@@ -1,10 +1,10 @@
 # Amanda's Digital Notebook
 Welcome! This is my personal portfolio and digital garden, built with a cutesy, demure, and minimalist notebook aesthetic. 
-I’m a graphic designer and builder currently exploring the intersections of finance, literature, law, and textiles through code. This space serves as my small hub tracking my creations, my learning journey, and the things I love.
+I’m a graphic designer, a student, and a builder currently exploring the intersections of finance, literature, law, and textiles through code. This space serves as my small hub tracking my creations, my learning journey, and the things I love.
 
 What's Inside This Notebook
-The Macondo Orchard: Real-time tracking for my 5 in progress software builds (Manda-Costura, Manda-Libra, SAT Practice Game, and College Navigator).
-The Launchpad: A curated toolbox of excellent resources (like freeCodeCamp and SideMe) that helped me learn coding to help other absolute beginners kickstart their coding paths.
+The Macondo Orchard: Real-time tracking for my 5 near-future software builds (Manda-Costura, Manda-Libra, SAT Practice Game, and College Navigator).
+The Launchpad: A curated toolbox of excellent resources (like freeCodeCamp and SideMe) that helped me learn coding to help other absolute beginners who view this project kickstart their coding paths.
 The Bookshelf: A real glimpse into what I'm reading—balancing heavy theory like The Concept of Law and The Code of Capital with my favorite werewolf fiction books.
 My Written Spaces: Direct pathways to my deep-dives on Substack, articles on Medium, and updates across my socials.
 Beacon Global Students Alliance (BGSA): A dedicated signup card for my non-profit community framework, inviting driven students to apply as founding executives.
